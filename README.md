@@ -24,6 +24,6 @@ localhost:4000/create<br>
 If your db gets multiple records for whatever reason, you can delete by id as well.  I didn't want that exposed in the api so you can edit /controllers/justdid.controller.js and change line 80 from the zero shown below to an id (I usually get them from mongo shell).
 JustdidModel.findByIdAndRemove('0')
 <br>
-## Credit
+## Credits
 Thanks!<br>
 [Tutorial for starting code](https://www.javaguides.net/2020/02/nodejs-express-and-mongodb-restful-crud-api-tutorial.html)
