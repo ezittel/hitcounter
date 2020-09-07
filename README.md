@@ -1,8 +1,9 @@
 # Hitcounter
-A counter that triggers every time you hit any key.
+A counter that triggers every time you hit any key.<br>
 
 ## Dependencies
-This require mongodb up and running.  You can create a db and a collection below.
+This requires mongodb up and running.  You can create a db and a collection using the /create target noted below.<br>
+I found I need to have node > version 10 to get this all running.
 <br>
 ## Usage
 pull this down.<br>
@@ -24,5 +25,5 @@ If your db gets multiple records for whatever reason, you can delete by id as we
 JustdidModel.findByIdAndRemove('0')
 <br>
 ## Credit
-Thanks:
+Thanks!<br>
 [Tutorial for starting code](https://www.javaguides.net/2020/02/nodejs-express-and-mongodb-restful-crud-api-tutorial.html)
