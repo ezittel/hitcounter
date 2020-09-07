@@ -1,4 +1,4 @@
-# Hitcounter
+# Hitcounter version 1.0
 A counter that triggers every time you hit any key.<br>
 
 ## Dependencies
