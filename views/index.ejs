@@ -14,22 +14,59 @@
 <script>
   document.onkeydown = function(evt) {
       evt = evt || window.event;
-      document.getElementById("didForm").submit();
-  };
-function myHere(){
+      //alert(evt.keyCode);
+      if (evt.keyCode == "32"){
+        document.getElementById("didForm").submit();
+      }
+      if (evt.keyCode == "17"){
+        document.getElementById("didLForm").submit();
+      }
+      if (evt.keyCode == "39"){
+        document.getElementById("didRForm").submit();
+      }
 
-}
+  };
+
 </script>
 
 </head>
    <body>
-     <form id="didForm" action = "/hCounter" method = "POST">
-       <input type="hidden" value='<%= list.hitcounter %>' name="hitcounter" id="hitcounter">
-       <hidden name="myhide" id="myhide" value='<%= list.hitcounter %>'/>
 
-       <center><h1><%= list.hitcounter %></h1></center>
-       
-     </form>
+     <table width="100%">
+       <tr>
+         <th>
+           <tr>
+             <td>
+               <center>Ctrl
+             </td>
+             <td>
+               <center>Space
+             </td>
+             <td>
+               <center>Rt Arrow
+             </td>
+           </tr>
+         </th>
+         <td>
+           <form id="didLForm" action = "/hLCounter" method = "POST">
+             <input type="hidden" value='<%= list.lhitcounter %>' name="lhitcounter" id="lhitcounter">
+             <center><h1><%= list.lhitcounter %></h1></center>
+           </form>
+         </td>
+         <td>
+           <form id="didForm" action = "/hCounter" method = "POST">
+             <input type="hidden" value='<%= list.hitcounter %>' name="hitcounter" id="hitcounter">
+             <center><h1><%= list.hitcounter %></h1></center>
+           </form>
+         </td>
+         <td>
+           <form id="didRForm" action = "/hRCounter" method = "POST">
+             <input type="hidden" value='<%= list.rhitcounter %>' name="rhitcounter" id="rhitcounter">
+             <center><h1><%= list.rhitcounter %></h1></center>
+           </form>
+         </td>
+       </tr>
 
+     </table>
    </body>
 </html>

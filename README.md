@@ -1,5 +1,5 @@
 # Hitcounter version 1.0
-A counter that triggers every time you hit any key.<br>
+Triple counters that increment by one every time you hit the corresponding key (control, space, right arrow).<br>
 
 ## Dependencies
 This requires mongodb up and running.  You can create a db and a collection using the /create target noted below.<br>
@@ -15,11 +15,11 @@ $npm run dev<br>
 The server will start up on port 4000 by default.<br>
 You can use these targets:<br>
 
-Reset the counter to 0<br>
-localhost:4000/reset<br>
-
 Create a db and collection <br>
 localhost:4000/create<br>
+
+Reset the counter to 0<br>
+localhost:4000/reset<br>
 
 If your db gets multiple records for whatever reason, you can delete by id as well.  I didn't want that exposed in the api so you can edit /controllers/justdid.controller.js and change line 80 from the zero shown below to an id (I usually get them from mongo shell).
 JustdidModel.findByIdAndRemove('0')
